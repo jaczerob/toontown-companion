@@ -40,9 +40,11 @@ function Suit({className, department, suitLevel, suitName, suitVersion, promotio
         promotion = `${promotionCurrent}/${promotionTarget}`
     }
 
-    let cog = suitName.toLowerCase().replace(' ', '_')
+    let cog = suitName.toLowerCase().replace(/[ -]/i, '_')
     let cogUrl = `https://toonhq.org/static/assets/cogs/${cog}.png`
 
+    console.log(cog)
+    console.log(cogUrl)
     let color = '';
     switch (department.toLowerCase()) {
         case "sellbot":

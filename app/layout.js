@@ -10,12 +10,10 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <body className={`min-h-screen grid-rows-4`} style={{backgroundImage: `url(/resources/gags_pattern.png)`, backgroundRepeat: `repeat`}}>
-        <Header className={`bg-white shadow-lg mb-4 h-16`}/>
-        <div className={`row-span-2`}>
-            {children}
-        </div>
-        <Footer className={`bg-white h-12`}/>
+        <body className={`flex flex-col h-screen justify-between`} style={{backgroundImage: `url(/resources/gags_pattern.png)`, backgroundRepeat: `repeat`}}>
+        <Header className={`bg-white shadow-lg mb-4`}/>
+        {children}
+        <Footer className={`bg-white`}/>
         </body>
         </html>
     );
